@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/index.css">
+    <title>Coding Quiz</title>
+</head>
+<body>
+    <button type="submit" id="startQuiz" onclick="startQuiz()">Start</button>
+    <div id="quiz" style="display:none;">
+        <p id="question"></p>
+        <div class="options">
+            <div class="choice" onclick="check()" id="A"></div>
+            <div class="choice" onclick="check()" id="B"></div>
+            <div class="choice" onclick="check()" id="C"></div>
+        </div>
+        <div class="answerCheck"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
