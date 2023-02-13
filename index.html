@@ -12,11 +12,16 @@
     <div id="quiz" style="display:none;">
         <p id="question"></p>
         <div class="options">
-            <div class="choice" onclick="check()" id="A"></div>
-            <div class="choice" onclick="check()" id="B"></div>
-            <div class="choice" onclick="check()" id="C"></div>
+            <div class="choice" onclick="proceed('A')" id="A"></div>
+            <div class="choice" onclick="proceed('B')" id="B"></div>
+            <div class="choice" onclick="proceed('C')" id="C"></div>
         </div>
-        <div class="answerCheck"></div>
+        <div id="answerCheck"></div>
+    </div>
+
+    <div id="ending-page" style="display: none;">
+        <h2 id="score"></h2>
+        <p id="amountCorrect"></p>
     </div>
     <script src="script.js"></script>
 </body>

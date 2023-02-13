@@ -1,10 +1,16 @@
 var start = document.getElementById('startQuiz');
+var checkAnswer = document.getElementById('answerCheck');
+var endPage = document.getElementById('ending-page');
+var score = document.getElementById('score');
+var outOf = document.getElementById('amountCorrect');
 var quiz = document.getElementById('quiz');
 var question = document.getElementById('question');
 var options = document.querySelector('options');
 var optionA = document.getElementById('A')
 var optionB = document.getElementById('B')
 var optionC = document.getElementById('C')
+
+var correct = 0;
 
 // Create an array of objects that represent each question that is going to be asked as well as the correct answer
 var questions = [
@@ -28,6 +34,13 @@ var questions = [
         optionB: "jscpt",
         optionC: "JSC",
         correctAnswer: "A"
+    },
+    {
+        question: "What data type return true or false?",
+        optionA: "Integer",
+        optionB: "String",
+        optionC: "Boolean",
+        correctAnswer: "C"
     }
 ];
 
@@ -47,16 +60,49 @@ function createQuestion() {
 
 start.addEventListener("click", startQuiz);
 
-function check() {
+// This function will check the answer that the user gave and then move the user to the next question
+function proceed(answer) {
+    if(answer == questions[currentQuestion].correctAnswer) {
+        checkAnswer.innerHTML = "Correct";
+        checkAnswer.style.color = "green";
+        console.log("Correct");
+        console.log(currentQuestion);
+        correct++;
+        console.log("Correct: ",correct);
+    } else {
+        checkAnswer.innerHTML = "Incorrect";
+        checkAnswer.style.color = "red";
+        console.log("incorrect");
+    }
+
+    // If question is answered then the user will move to the next question.
     if (currentQuestion < finalQuestion) {
-        currentQuestion++;
-        createQuestion();
+        var timerFeedback = setInterval(function () {
+            checkAnswer.innerHTML = "";
+            createQuestion();
+        }, 1500);
+        currentQuestion++; 
+    } else {
+        var endPage = setInterval(function() {
+            quiz.style.display = "none";
+            getScore();
+        }, 1500);
     }
 }
 
+// Function that will start the quiz
 function startQuiz() {
     //alert("Hello");
     start.style.display = "none";
     createQuestion();
     quiz.style.display = "block";
 }
+
+// Function gets the users score
+function getScore() {
+    endPage.style.display = "block";
+    var userScore = correct * 10;
+    score.innerHTML = "Score: " + userScore;
+    outOf.innerHTML = "You got " + correct + "/" + questions.length + "questions correct!";
+}
+
