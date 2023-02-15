@@ -8,21 +8,43 @@
     <title>Coding Quiz</title>
 </head>
 <body>
-    <button type="submit" id="startQuiz" onclick="startQuiz()">Start</button>
+    <header>
+        <div id="highscore">View High Scores</div>
+        <div id="timer">Timer: <span id="timeLeft">0</span></div>
+    </header>
+    <div class="intro" id="intro">
+       <h1>Would you like to take our coding quiz?</h1> 
+       <p>
+          This quiz encapsulates very basic questions regarding
+          JavaScript. You do not need extensive knowledge of this
+          lanaguage, but it will help out if you do.
+        </p>
+        <button type="submit" id="startQuiz" class="start" onclick="startQuiz()">Start Quiz!</button>
+    </div>
+    
     <div id="quiz" style="display:none;">
-        <p id="question"></p>
-        <div class="options">
-            <div class="choice" onclick="proceed('A')" id="A"></div>
-            <div class="choice" onclick="proceed('B')" id="B"></div>
-            <div class="choice" onclick="proceed('C')" id="C"></div>
+        <div class="inner">
+            <p id="question"></p>
+            <div class="options">
+                <div class="choice" onclick="proceed('A')" id="A"></div>
+                <div class="choice" onclick="proceed('B')" id="B"></div>
+                <div class="choice" onclick="proceed('C')" id="C"></div>
+            </div>
+            <div id="answerCheck"></div>
         </div>
-        <div id="answerCheck"></div>
     </div>
 
     <div id="ending-page" style="display: none;">
         <h2 id="score"></h2>
         <p id="amountCorrect"></p>
+        <form>
+            <input type="text" id="playerName" placeholder="Name">
+            <button type="submit" id="add-button">Add</button>
+        </form>
+        <ul id="scoreboard">
+            <li id="newScore"></li>
+        </ul>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js"></script> 
 </body>
 </html>
