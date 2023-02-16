@@ -59,20 +59,20 @@ function addName() {
     savedName.push(playerName.value);
     savedScore.push(playerScore);
     var li = document.createElement("li");
-    //.createTextNode can be used in many ways. 
-    li.appendChild(document.createTextNode(playerName.value + "-" + playerScore)); //Creates a new text node because it is dependant on user input
-    scoreboard.appendChild(li);
-    playerName.value = "";
+    //.createTextNode can be used in many ways. In this one we are generating the list elements programatically. This would end in an error if its not in there.
+    li.appendChild(document.createTextNode(playerName.value.toUpperCase() + "-" + playerScore)); //Creates a new text node because it is dependant on user input
+    scoreboard.appendChild(li); //Appending the list element to the scoreboard list
+    playerName.value = ""; // Resetting the value in the input element
+    // Saving to local storage
     localStorage.setItem("Name", JSON.stringify(savedName));
     localStorage.setItem("score", JSON.stringify(savedScore));
-    console.log(savedName);
 }
 
 // This function get the names and scores from local storage
 function getNames() {
     for (var i = 0; i < savedName.length; i++) {
         var li = document.createElement("li");
-        li.innerHTML = i+1 + ". " + savedName[i] + " - " + savedScore[i]
+        li.innerHTML = i+1 + ". " + savedName[i].toUpperCase() + " - " + savedScore[i] // EX. 1. ML - 10
         scoreboard.appendChild(li);
     }
 }
@@ -103,10 +103,10 @@ clearStorage.addEventListener('click', function() {
 // Sends us back to the main page where we start the quiz from
 backBtn.addEventListener('click', function() {
     // This takes the window and changes its location to the given URL/PATH
-    window.location.href = "../index.html";
+    window.location.href = "index.html"; // Goes to the page that is specified
 });
 
 // Goes to the highscore page when the div is clicked
 highscore.addEventListener("click", function() {
-    window.location.href = "Ending.html";
+    window.location.href = "Ending.html"; // Goes to the page that is specified
 });
