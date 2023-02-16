@@ -22,7 +22,7 @@ var timeLeft = 50;
 countdownTimer.innerHTML = timeLeft;
 
 function endingPage() {
-    window.location.href = "Ending.html";
+    window.location.href = "https://mjlynch123.github.io/Coding_Quiz/Ending.html";
 }
 
 var timerInterval = setInterval(function() {
