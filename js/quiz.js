@@ -97,7 +97,7 @@ function proceed(answer) {
         timeLeft -= 15;
     }
 
-    // Move on to the next question
+    // Move onto the next question 
     if (currentQuestion < finalQuestion) {
         setTimeout(function () {
             checkAnswer.innerHTML = "";
@@ -105,7 +105,7 @@ function proceed(answer) {
             createQuestion();
         }, 1500);
     } else {
-        // End the quiz if there are no more questions
+        // End the quiz if there arent any questions left
         setTimeout(function() {
             endingPage();
         }, 1500);
