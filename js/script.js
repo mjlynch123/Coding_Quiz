@@ -11,6 +11,10 @@ function startQuiz() {
     //countdownTimer.innerHTML = timeLeft;
 }
 
+start.addEventListener('click', function() {
+    startQuiz();
+});
+
 // Goes to the highscore page when the div is clicked
 highscore.addEventListener("click", function() {
     window.location.href = "Ending.html";
