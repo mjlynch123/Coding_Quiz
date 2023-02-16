@@ -6,7 +6,7 @@ var endPage = document.getElementById('ending-page');
 
 // Function that will start the quiz
 function startQuiz() {
-    window.location.href = "quiz.html";
+    window.location.href = "/quiz.html";
 
     countdownTimer.innerHTML = timeLeft;
 }
