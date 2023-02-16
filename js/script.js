@@ -1,4 +1,4 @@
-var start = document.getElementById('startQuiz');
+var start = document.querySelector('#startQuiz');
 var intro = document.getElementById('intro');
 var highscore = document.querySelector("#highscore");
 var endPage = document.getElementById('ending-page');
