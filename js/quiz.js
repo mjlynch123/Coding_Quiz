@@ -101,9 +101,7 @@ function proceed(answer) {
         }, 1500);
         currentQuestion++; 
     } else {
-        var endPage = setInterval(function() {
-            window.location.href = "Ending.html";
-        }, 1500);
+        window.location.href = "Ending.html";
     }
 }
 
