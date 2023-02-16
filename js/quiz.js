@@ -103,7 +103,7 @@ function proceed(answer) {
             checkAnswer.innerHTML = "";
             currentQuestion++;
             createQuestion();
-        }, 1500);
+        }, 2000);
     } else {
         // End the quiz if there arent any questions left
         setTimeout(function() {
