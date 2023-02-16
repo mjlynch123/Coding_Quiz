@@ -8,7 +8,7 @@ var endPage = document.getElementById('ending-page');
 function startQuiz() {
     window.location.href = "quiz.html";
 
-    countdownTimer.innerHTML = timeLeft;
+    //countdownTimer.innerHTML = timeLeft;
 }
 
 // Goes to the highscore page when the div is clicked
