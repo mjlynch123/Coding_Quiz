@@ -21,13 +21,17 @@ var timeLeft = 50;
 
 countdownTimer.innerHTML = timeLeft;
 
+function endingPage() {
+    window.location.href = "Ending.html";
+}
+
 var timerInterval = setInterval(function() {
     timeLeft--;
     countdownTimer.innerHTML = timeLeft; //resetting the timer on the page each second
 
     // If the time hits 0 then the quiz ends and display the end page and clears the interval
     if (timeLeft <= 0) {
-        window.location.href = "Ending.html"
+        endingPage();
         getScore();
         clearInterval(timerInterval);
         timer.innerHTML = "Timer: " + 0;
@@ -101,13 +105,13 @@ function proceed(answer) {
         }, 1500);
         currentQuestion++; 
     } else {
-        window.location.href = "Ending.html";
+        endingPage();
     }
 }
 
 // Goes to the highscore page when the div is clicked
 highscore.addEventListener("click", function() {
-    window.location.href = "Ending.html";
+    endingPage();
 });
 
 createQuestion();
