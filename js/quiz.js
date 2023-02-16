@@ -97,15 +97,16 @@ function proceed(answer) {
         timeLeft -= 15;
     }
 
-    // If question is answered then the user will move to the next question.
+    // Move on to the next question
     if (currentQuestion < finalQuestion) {
-        var timerFeedback = setInterval(function () {
+        setTimeout(function () {
             checkAnswer.innerHTML = "";
+            currentQuestion++;
             createQuestion();
         }, 1500);
-        currentQuestion++; 
     } else {
-        var endingTime = setInterval(function() {
+        // End the quiz if there are no more questions
+        setTimeout(function() {
             endingPage();
         }, 1500);
     }
@@ -117,4 +118,3 @@ highscore.addEventListener("click", function() {
 });
 
 createQuestion();
-getNames();
