@@ -107,7 +107,8 @@ function proceed(answer) {
     }
 }
 
-highscore.addEventListener('click', function() {
+// Goes to the highscore page when the div is clicked
+highscore.addEventListener("click", function() {
     window.location.href = "Ending.html";
 });
 
