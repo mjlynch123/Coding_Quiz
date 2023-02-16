@@ -102,7 +102,7 @@ function proceed(answer) {
         currentQuestion++; 
     } else {
         var endPage = setInterval(function() {
-            window.location.href = "Ending.html";
+            window.location.href = "C:/Users/l3gon/Desktop/Bootcamp/Coding_Quiz/Ending.html";
         }, 1500);
     }
 }
