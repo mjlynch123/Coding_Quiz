@@ -102,10 +102,14 @@ function proceed(answer) {
         currentQuestion++; 
     } else {
         var endPage = setInterval(function() {
-            window.location.href = "Ending.html"
+            window.location.href = "Ending.html";
         }, 1500);
     }
 }
+
+highscore.addEventListener('click', function() {
+    window.location.href = "Ending.html";
+});
 
 createQuestion();
 getNames();
