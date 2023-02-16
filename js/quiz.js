@@ -27,9 +27,7 @@ var timerInterval = setInterval(function() {
 
     // If the time hits 0 then the quiz ends and display the end page and clears the interval
     if (timeLeft <= 0) {
-        quiz.style.display = "none";
-        endPage.style.display = "block";
-        highscore.style.display = "none";
+        window.location.href = "Ending.html"
         getScore();
         clearInterval(timerInterval);
         timer.innerHTML = "Timer: " + 0;
@@ -104,7 +102,7 @@ function proceed(answer) {
         currentQuestion++; 
     } else {
         var endPage = setInterval(function() {
-            window.location.href = "../Ending.html";
+            window.location.href = "Ending.html"
         }, 1500);
     }
 }
