@@ -107,7 +107,7 @@ function proceed(answer) {
     } else {
         var endingTime = setInterval(function() {
             endingPage();
-        }, 1000);
+        }, 1500);
     }
 }
 
