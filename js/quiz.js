@@ -105,7 +105,9 @@ function proceed(answer) {
         }, 1500);
         currentQuestion++; 
     } else {
-        endingPage();
+        var endingTime = setInterval(function() {
+            endingPage();
+        }, 1000);
     }
 }
 
