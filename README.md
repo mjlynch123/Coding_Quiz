@@ -1,6 +1,6 @@
 # Coding_Quiz
 
-![Main Screen Images](Assets\Images\Coding_Quiz_Screenshot.png)
+![Main Screen Images](Images\Coding_Quiz_Screenshot.png)
 
 # Description
 This project gives the user a short 50 seconds or less quiz on the concepts of JavaScript. The user, at the end, will be able to save their name and score to the scoreboard using LocalStorage. The user will see two buttons at the bottom of the scoreboard that will allow them to go back and redo the quiz or they can clear the local storage. If they click to clear the local storage, they will see that the scoreboard clears and the players name and score will no longer be stored.
