@@ -161,6 +161,12 @@ input[name="initials"] {
     width: 75px;
 }
 
+#add-button:hover {
+    cursor: pointer;
+    background-color: hsla(150, 100%, 40%, .7);
+
+}
+
 #scoreboard {
     background-color: #f2f2f2;
     width: 75%;
