@@ -156,6 +156,7 @@ input[name="initials"] {
 #add-button {
     border: none;
     background-color: #00cc66;
+    color: white;
     height: 31px;
     width: 75px;
 }
