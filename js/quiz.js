@@ -41,7 +41,7 @@ var timerInterval = setInterval(function() {
 var questions = [
     {
         question: "How long did it take to make JavaScript?",
-        optionA: "12 Days",
+        optionA: "10 Days",
         optionB: "12 Years",
         optionC: "3 Months",
         correctAnswer: "A"
