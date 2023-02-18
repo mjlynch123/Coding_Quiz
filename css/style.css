@@ -152,7 +152,7 @@ body {
 #scoreboard {
     background-color: #f2f2f2;
     width: 75%;
-    min-height: 250px;
+    min-height: 250px; /*this sets the minimun height of the scoreboard */
     margin-top: 10px;
     margin: 10px auto;
     padding: 0;
