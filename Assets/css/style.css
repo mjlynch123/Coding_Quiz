@@ -33,6 +33,10 @@ body {
     background-color: #00cc66;
 }
 
+.start:hover {
+    cursor: pointer;
+}
+
 /* Quiz Page */
 #highscore {
     font-size: 25px;
