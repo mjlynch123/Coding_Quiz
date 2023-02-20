@@ -59,7 +59,6 @@ function addName() {
     savedName.push(playerName.value);
     savedScore.push(playerScore);
     var li = document.createElement("li");
-    //.createTextNode can be used in many ways. In this one we are generating the list elements programatically. This would end in an error if its not in there.
     li.appendChild(document.createTextNode(playerName.value.toUpperCase() + "-" + playerScore)); //Creates a new text node because it is dependant on user input
     scoreboard.appendChild(li); //Appending the list element to the scoreboard list
     playerName.value = ""; // Resetting the value in the input element
